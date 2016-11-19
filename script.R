@@ -37,9 +37,6 @@ bikesStolen$fromDate <- as.Date(
 bikesStolen$toDate <- as.Date(bikesStolen$toDate, format = "%m/%d/%Y")
 bikesStolen$Speed <- as.factor(bikesStolen$Speed)
 
-# SEE IF EVERYTHING IS IN THE RIGHT FORMAT
-str(bikesStolen)
-
 bikesStolen$Color <- ordered(
   bikesStolen$Color,
   levels=c("BLK","BLU","WHI","GRN","RED","GRY",
@@ -52,7 +49,8 @@ bikesStolen$Color <- ordered(
            "Dark Green","Tan","Chrome","Gold","Diamond Blue",
            "Cream/Ivory","Beige", "Not Given"))
 
-
+# SEE IF EVERYTHING IS IN THE RIGHT FORMAT
+str(bikesStolen)
 # CREATE GGPLOT GRAPH DISPLAYING THE COLOR OPTIONS OF STOLEN BIKES
 
 # HERE WE CREATE A DATA TABLE FOR THE COUNTS OF THE COLORS USING THE
